@@ -31,7 +31,7 @@ React • Telegraf • Node.js • Netlify
 ## 📸 Screenshots
 | Home | Cart |
 |---|---|
-![Home](public/result.jpg) 
+![Home](public/result.jpg) | ![Home](public/logo512.png)
 
 ## 🗺 Roadmap
 - [ ] localStorage cart
