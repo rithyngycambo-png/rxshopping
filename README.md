@@ -29,7 +29,7 @@ Drag & drop **/build** into Netlify. Put the site URL in \`bot.js\`.
 React • Telegraf • Node.js • Netlify
 
 ## 📸 Screenshots
-| Home | Cart |
+| Home |
 |---|---|
 ![Home](public/result.jpg)
 
