@@ -1,70 +1,68 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Git Bash alternative
 
-## Available Scripts
+cat > README.md << 'EOF'
+# RXShopping 🛒⚡ – Telegram Shop (React + Telegraf)
+[![Netlify Status](https://img.shields.io/badge/Deployed%20on-Netlify-00C7B7?logo=netlify&logoColor=white)](https://YOUR_NETLIFY_URL/)
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![Node](https://img.shields.io/badge/Node.js-22-339933?logo=node.js&logoColor=white)
+![Telegraf](https://img.shields.io/badge/Telegraf-Bot-26A5E4?logo=telegram&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-purple)
 
-In the project directory, you can run:
+> A lightweight **Telegram mini-shop**: React WebApp UI inside Telegram + Node/Telegraf bot that opens the shop and handles checkout hooks.
 
-### `npm start`
+## ✨ Features
+- **WebApp inside Telegram** (opens via bot button)
+- **Product cards + cart** (add/remove, live totals)
+- **Clean component structure** (Button, Card, Cart)
+- **Ready for payments**
+- **Netlify deploy**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Quick Start
+### Frontend
+\`\`\`bash
+cd frontend
+npm install
+npm start
+\`\`\`
+### Bot
+\`\`\`bash
+cd frontend/Bot
+npm install telegraf
+node bot.js
+\`\`\`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+\`\`\`js
+// bot.js snippet
+const { Telegraf } = require("telegraf");
+const TOKEN = process.env.BOT_TOKEN || "REPLACE_WITH_YOUR_TOKEN";
+const bot = new Telegraf(TOKEN);
+const web_link = "https://YOUR_NETLIFY_URL/";
+bot.start((ctx)=>ctx.reply("Welcome to RXShopping 🛒",{reply_markup:{keyboard:[[{text:"🛍 Open Shop", web_app:{url:web_link}}]],resize_keyboard:true}}));
+bot.launch();
+\`\`\`
 
-### `npm test`
+## 🌐 Deploy (Netlify)
+\`\`\`bash
+cd frontend
+npm run build
+\`\`\`
+Drag & drop **/build** into Netlify. Put the site URL in \`bot.js\`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Tech
+React • Telegraf • Node.js • Netlify
 
-### `npm run build`
+## 📸 Screenshots
+| Home | Cart |
+|---|---|
+![Home](public/result.jpg) 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🗺 Roadmap
+- [ ] localStorage cart
+- [ ] payments
+- [ ] admin CRUD
+- [ ] order notifications
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📝 License
+MIT © YOUR_NAME
+EOF
