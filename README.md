@@ -18,30 +18,6 @@ cat > README.md << 'EOF'
 - **Ready for payments**
 - **Netlify deploy**
 
-## 🚀 Quick Start
-### Frontend
-\`\`\`bash
-cd frontend
-npm install
-npm start
-\`\`\`
-### Bot
-\`\`\`bash
-cd frontend/Bot
-npm install telegraf
-node bot.js
-\`\`\`
-
-\`\`\`js
-// bot.js snippet
-const { Telegraf } = require("telegraf");
-const TOKEN = process.env.BOT_TOKEN || "REPLACE_WITH_YOUR_TOKEN";
-const bot = new Telegraf(TOKEN);
-const web_link = "https://YOUR_NETLIFY_URL/";
-bot.start((ctx)=>ctx.reply("Welcome to RXShopping 🛒",{reply_markup:{keyboard:[[{text:"🛍 Open Shop", web_app:{url:web_link}}]],resize_keyboard:true}}));
-bot.launch();
-\`\`\`
-
 ## 🌐 Deploy (Netlify)
 \`\`\`bash
 cd frontend
@@ -66,3 +42,12 @@ React • Telegraf • Node.js • Netlify
 ## 📝 License
 MIT © YOUR_NAME
 EOF
+
+
+## 👤 Author
+**Rithy Ngy**  
+📧 **Email:** rithyngycambo@gmail.com  
+📱 **Phone:** (+855) 093 777 248      
+📍 **Location:** Phnom Penh, Cambodia  
+💬 **Telegram:** [@N_Rithy](https://t.me/N_Rithy)  
+📞 **WhatsApp:** [Chat with me](https://wa.me/855093777248)
