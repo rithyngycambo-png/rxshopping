@@ -38,11 +38,6 @@ React • Telegraf • Node.js • Netlify
 - [ ] admin CRUD
 - [ ] order notifications
 
-## 📝 License
-MIT © YOUR_NAME
-EOF
-
-
 ## 👤 Author
 **Rithy Ngy**  
 📧 **Email:** rithyngycambo@gmail.com  
